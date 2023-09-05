@@ -1,3 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
 body {
     background-color:blanchedalmond;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* bug: using flex to center content. The #main parent div will not center #sound-board child div.*/
+/* solved: unexpected behaviour was occuring with centering elements*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* sound-board structure*/
+#sound-board {
+    width: 310px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+    border-style: solid;
+    border-color: #f44336;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#join {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: small;
+    width: 300px;
+}
+
+#nav:link,
+#nav:visited {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#nav:hover,
+#nav:active {
+    background-color: red;
+}
+
+#form-div {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+#errors {
+    background-color: lightpink;
+    padding: 10px;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 3px;
+    display: none;
+}
+
+input {
+    border: solid;
+    border-color: grey;
+}
+
+#wallpaper {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
 }
