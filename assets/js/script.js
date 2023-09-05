@@ -1,6 +1,8 @@
 console.log("welcome to sound fi");
 
 //Javascritp function for audio pads.
+//https://www.w3schools.com/jsref/met_audio_play.asp
+
 const x = document.getElementById("kick");
 
 function playPadOne() {
@@ -76,6 +78,26 @@ function playPadTwelve() {
     keys3.play();
 }
 //audio section end
+
+/* js functionallity to add
+
+event listener. When user clicks a key on the keyboard a sound pad plays. 
+Keys mapped
+z=1 x=2 c=3
+a=4 s=5 d=6
+q=7 w=8 e=9
+r=10 t=11 y=12
+
+eg. when key w is pressed playPadOne() function called
+
+/* Solution to problem described in the comment above founh here. 
+https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+
+audio can played immiedatley from start even while playing back.
+eg https://www.myinstants.com/en/instant/ive-got-you-in-my-sight-52194/
+
+*/
+
 
 //form section
 
