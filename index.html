@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Sound-Fi</title>
   </head>
+  <body>
   <section class="audio">
     <!--audio elements hidden from page-->
     <!--kick-->
@@ -69,12 +70,51 @@
         <source src="assets/audio/keys3.ogg" type="audio/ogg">
         <source src="assets/audio/keys3.mp3" type="audio/mpeg">
     </audio>
-    <!---audio elements end-->
+    <!---audio elements hidden end-->
   </section>
-  
+    <header>
+        <h1>Sound-Fi</h1>
+    </header>
+    <!--user interface-->
+    <section id="user-view">
+        <div class="main">
+            <!--soundboard-container-->
+            <div id="sound-board">
+                <!--row container 4-->
+                <div class="row">
+                    <button class="sound-btn" onclick="playPadTen()">10</button>
+                    <button class="sound-btn" onclick="playPadEleven()">11</button>
+                    <button class="sound-btn" onclick="playPadTwelve()">12</button>
+                </div>
+                <!--row container 3-->
+                <div class="row">
+                    <button class="sound-btn" onclick="playPadSeven()">7</button>
+                    <button class="sound-btn" onclick="playPadEight()">8</button>
+                    <button class="sound-btn" onclick="playPadNine()">9</butto>
+                </div>
+                <!--row container 2-->
+                <div class="row">
+                    <button class="sound-btn" onclick="playPadFour()">4</button>
+                    <button class="sound-btn" onclick="playPadFive()">5</button>
+                    <button class="sound-btn" onclick="playPadSix()">6</butto>
+                </div>
+                <!--row container 1-->
+                <div class="row">
+                    <button id="btn-1" class="sound-btn1" onclick="playPadOne()" onkeydown="playPadOne" type="button">1</button>
+                    <button class="sound-btn" onclick="playPadTwo()" type="button">2</button>
+                    <button class="sound-btn" onclick="playPadThree()" type="button">3</button>
+                </div>
+            </div>
+            <!--sound-board end-->
+            <div id="join">
+                <p>Create and account to get free and exclusive access to sound-fi updates</p>
+                <a id="nav" href="form.html" target="_blank">Create Acount</a>
+            </div>
+        </div>
+        <!--main end-->
 
-  </section>
-  <body>
+    </section>
+ 
     <script src="assets/js/script.js"></script>
   </body>
   <footer></footer>
