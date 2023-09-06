@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color:blanchedalmond;
+    background-color: blanchedalmond;
 }
 
 header {
@@ -27,8 +27,8 @@ header {
 }
 
 /* sound-board structure*/
-#sound-board {
-    width: 310px;
+.sound-board {
+    width: 320px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,13 @@ header {
     border-style: solid;
     border-color: #f44336;
     border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+#sound-board2 {
+    margin-top: 10px;
 }
 
 .row {
@@ -58,8 +65,8 @@ header {
 }
 
 button {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     padding: 10px;
     margin: 10px;
 }

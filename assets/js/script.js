@@ -77,6 +77,28 @@ const keys3 = document.getElementById("keys3");
 function playPadTwelve() {
     keys3.play();
 }
+
+//loop board
+
+const loop1 = document.getElementById("loop1");
+
+function playLoop1() {
+    loop1.play();
+}
+
+const loop2 = document.getElementById("loop2");
+
+function playLoop2() {
+    loop2.play();
+}
+
+const loop3 = document.getElementById("loop2");
+
+function playLoop3() {
+    loop3.play();
+}
+
+
 //audio section end
 
 /* js functionallity to add

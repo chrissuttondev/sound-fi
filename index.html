@@ -70,6 +70,21 @@
         <source src="assets/audio/keys3.ogg" type="audio/ogg">
         <source src="assets/audio/keys3.mp3" type="audio/mpeg">
     </audio>
+    <!--loop1-->
+    <audio id="loop1">
+        <source src="assets/audio/loop1.ogg" type="audio/ogg">
+        <source src="assets/audio/loop1.mp3" type="audio/mpeg">
+    </audio>
+    <!--loop2-->
+    <audio id="loop2">
+        <source src="assets/audio/loop2.ogg" type="audio/ogg">
+        <source src="assets/audio/loop2.mp3" type="audio/mpeg">
+    </audio>
+    <!--loop3-->
+    <audio id="loop2">
+        <source src="assets/audio/loop3.ogg" type="audio/ogg">
+        <source src="assets/audio/loop4.mp3" type="audio/mpeg">
+    </audio>
     <!---audio elements hidden end-->
   </section>
     <header>
@@ -80,7 +95,7 @@
     <section id="user-view">
         <div class="main">
             <!--soundboard-container-->
-            <div id="sound-board">
+            <div class="sound-board">
                 <!--row container 4-->
                 <div class="row">
                     <button class="sound-btn" onclick="playPadTen()">10</button>
@@ -103,14 +118,21 @@
                 <div class="row">
                     <button id="btn-1" class="sound-btn1" onclick="playPadOne()" onkeydown="playPadOne" type="button">1</button>
                     <button class="sound-btn" onclick="playPadTwo()" type="button">2</button>
-                    <button class="sound-btn" onclick="playPadThree()" type="button">3</button>
+                    <button class="sound-btn" onclick="playPadFour()" type="button">3</button>
                 </div>
             </div>
             <!--sound-board end-->
-            <div id="join">
-                <p>Create and account to get free and exclusive access to sound-fi updates</p>
-                <a id="nav" href="form.html" target="_blank">Create Acount</a>
+            <!--loop soundboard-container-->
+            <div class="sound-board" id="sound-board2">
+                <!--row container loop-->
+                <div class="row">
+                    <button id="btn-1" class="sound-btn1" onclick="playLoop1()" onkeydown="playPadOne" type="button">Loop1</button>
+                    <button class="sound-btn" onclick="playLoop2()" type="button">loop2</button>
+                    <button class="sound-btn" onclick="playLoop3()" type="button">loop3</button>
+                </div>
             </div>
+            <!--loop sound-board end-->
+                <a id="nav" href="form.html" target="_blank">Create Acount</a>            
         </div>
         <!--main end-->
 
