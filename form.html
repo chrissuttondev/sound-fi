@@ -22,7 +22,7 @@
       <div class="sound-board">
         <div id="form">
           <!--form content from code institute valitdating formslesson-->
-          <form id="registration-form" action="thank_you.html" method="POST">
+          <form id="registration-form" action="thank_you.html">
             <div id="form-div" class="username">
               <label for="username">Username</label>
               <input name="username" id="username" type="text" required />
@@ -92,12 +92,8 @@
                 Error code: 501Message: Unsupported method ('POST').
                 Error code explanation: HTTPStatus.NOT_IMPLEMENTED - 
                 Server does not support this operation".
-            
-                live site showing 405 error message. 
-                "The 405 error confirms that the requested page does exist, 
-                but the HTTP method used to make the initial request is not accepted."
-                (https://www.keycdn.com/support/405-method-not-allowed#:~:text=The%20405%20Method%20Not%20Allowed%20error%20is%20an%20HTTP%20response,HTTP%20method%20that%20was%20used.)
-        -->
+        SOLVED removed attribute method and property post from form  --> 
+    
     <!--js-->
     <script src="assets/js/script.js"></script>
   </body>
