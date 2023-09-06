@@ -1,3 +1,7 @@
+/*
+color scheme
+#FF6B35 #F7C59F #EFEFD0 #004E89 #1A659E #800000 #85c7f2
+*/
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-    background-color: blanchedalmond;
+    background-color: #EFEFD0;
     font-family: 'Orbitron', sans-serif;
     font-family: 'Silkscreen', cursive;
 }
@@ -22,6 +26,7 @@ h1 {
     font-size: 100%;
     font-family: 'silkscreen';
     text-transform: uppercase;
+    letter-spacing: 5px;
     margin-bottom: 10px;
 }
 
@@ -29,11 +34,17 @@ h3 {
     font-size: 80%;
     text-transform: uppercase;
     font-family: 'orbitron';
+    letter-spacing: 2px;
+    text-align: center;
+
 }
 
 h4 {
     font-size: 60%;
     text-transform: uppercase;
+    font-family: 'orbitron';
+    letter-spacing: 2px;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -56,9 +67,8 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     border-style: solid;
-    border-color: #f44336;
+    border-color: #FF6B35;
     border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -66,7 +76,7 @@ h4 {
 }
 
 #sound-board2 {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -92,8 +102,16 @@ button {
     height: 70px;
     padding: 10px;
     margin: 10px;
+    border-radius: 5PX;
     font-family: 'Orbitron', sans-serif;
+    font-family: 'orbitron';
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #F7C59F;
+}
 
+button:active {
+    background-color: #FF6B35;
 }
 
 p {
@@ -105,10 +123,17 @@ p {
 #nav:link,
 #nav:visited {
     margin-top: 5px;
-    background-color: #f44336;
+    background-color: #FF6B35;
+    border-radius: 5px;
     color: white;
-    padding: 14px 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width:310px;
+    height: 20px;
     text-align: center;
+    letter-spacing: 2px;
     font-family: 'Orbitron', sans-serif;
     text-decoration: none;
     display: inline-block;
@@ -116,7 +141,7 @@ p {
 
 #nav:hover,
 #nav:active {
-    background-color: red;
+    background-color: #daa18c;
 }
 
 #form-div {
@@ -147,5 +172,9 @@ label {
 input {
     border: solid;
     border-color: grey;
+    border-radius: 5px;
 }
 
+label {
+    font-family: 'Orbitron', sans-serif;
+}
