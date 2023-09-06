@@ -3,74 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Sound-Fi</title>
   </head>
   <body>
     <header>
-      <h1>Sound-Fi</h1>
+      <div class="header">
+        <h1>Sound-Fi</h1>
+      </div>
+      <h3>Creat and account</h3>
+      <h3>for exclusive access to updats</h3>
       <h4>Form for demo purposes only</h4>
     </header>
     <div class="main">
-      <div id="form">
-        <!--form content from code institute valitdating formslesson-->
-        <form id="registration-form" action="thank_you.html" method="POST">
-          <div id="form-div" class="username">
-            <label for="username">Username</label>
-            <input name="username" id="username" type="text" required />
-          </div>
-          <div id="form-div" class="email">
-            <label for="email">Email</label>
-            <input name="email" id="email" type="email" required />
-          </div>
-          <div id="form-div" class="password">
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" required />
-          </div>
-          <div id="form-div" class="confirm-password">
-            <label for="confirm-password">Confirm Password</label>
-            <input
-              name="confirm-password"
-              id="confirm-password"
-              type="password"
-              required
-            />
-          </div>
-          <div id="form-div" class="age">
-            <label for="age">Age</label>
-            <input
-              name="age"
-              id="age"
-              type="number"
-              min="18"
-              max="110"
-              required
-            />
-          </div>
-          <div id="form-div" class="phone">
-            <label for="phone">Phone (numbers only)</label>
-            <input
-              name="phone"
-              id="phone"
-              type="text"
-              pattern="[0-9]+"
-              required
-            />
-          </div>
-          <div id="form-div" class="join-newsletter">
-            <label for="join-newsletter">Join Newsletter</label>
-            <input
-              name="join-newsletter"
-              id="join-newsletter"
-              type="checkbox"
-              checked
-            />
-          </div>
-          <div id="errors"></div>
-          <div id="form-div" class="submit">
-            <input type="submit" value="Register" />
-          </div>
-        </form>
+      <div class="sound-board">
+        <div id="form">
+          <!--form content from code institute valitdating formslesson-->
+          <form id="registration-form" action="thank_you.html" method="POST">
+            <div id="form-div" class="username">
+              <label for="username">Username</label>
+              <input name="username" id="username" type="text" required />
+            </div>
+            <div id="form-div" class="email">
+              <label for="email">Email</label>
+              <input name="email" id="email" type="email" required />
+            </div>
+            <div id="form-div" class="password">
+              <label for="password">Password</label>
+              <input name="password" id="password" type="password" required />
+            </div>
+            <div id="form-div" class="confirm-password">
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                name="confirm-password"
+                id="confirm-password"
+                type="password"
+                required
+              />
+            </div>
+            <div id="form-div" class="age">
+              <label for="age">Age</label>
+              <input
+                name="age"
+                id="age"
+                type="number"
+                min="18"
+                max="110"
+                required
+              />
+            </div>
+            <div id="form-div" class="phone">
+              <label for="phone">Phone (numbers only)</label>
+              <input
+                name="phone"
+                id="phone"
+                type="text"
+                pattern="[0-9]+"
+                required
+              />
+            </div>
+            <div id="form-div" class="join-newsletter">
+              <label for="join-newsletter">Join Newsletter</label>
+              <input
+                name="join-newsletter"
+                id="join-newsletter"
+                type="checkbox"
+                checked
+              />
+            </div>
+            <div id="errors"></div>
+            <div id="form-div" class="submit">
+              <input type="submit" value="Register" />
+            </div>
+          </form>
+        </div>
         <div id="join">
           <a id="nav" href="index.html" target="_blank">Back to Sound-Fi</a>
         </div>

@@ -120,6 +120,10 @@ eg https://www.myinstants.com/en/instant/ive-got-you-in-my-sight-52194/
 
 */
 
+//funtion for loop pads. Event listeners. play on loop when clicked. play end of loop on next click.
+//loops can not overlap.
+
+
 //form validation function 
 
 function handleSubmit(event) {
