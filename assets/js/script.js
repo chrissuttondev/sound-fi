@@ -1,4 +1,8 @@
 console.log("welcome to sound fi");
+//get audio, place in array and call array sounbLibOne.
+let audioFiles = document.getElementsByClassName('audio');
+console.log(audioFiles);
+
 
 //get audio form html
 let audioSamples = document.getElementsByTagName("audio");
