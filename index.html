@@ -12,78 +12,78 @@
   <body>
   <section class="audio">
     <!--audio elements hidden from page-->
-    <!--kick-->
+    <!--kick child 1-->
     <audio id="kick">
         <source src="assets/audio/kick1.ogg" type="audio/ogg">
         <source src="assets/audio/kick1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <!--snare1-->
+    <!--snare1 child2 -->
     <audio id="snare">
         <source src="assets/audio/snare1.ogg" type="audio/ogg">
         <source src="assets/audio/snare1.mp3" type="audio/mpeg">
     </audio>
-    <!--snare2-->
+    <!--snare2 child 3-->
     <audio id="snare2">
         <source src="assets/audio/snare2.ogg" type="audio/ogg">
         <source src="assets/audio/snare2.mp3" type="audio/mpeg">
     </audio>
-    <!--hh1-->
+    <!--hh1 child 4-->
     <audio id="hh1">
         <source src="assets/audio/hh1.ogg" type="audio/ogg">
         <source src="assets/audio/hh1.mp3" type="audio/mpeg">
     </audio>
-    <!--hh2-->
+    <!--hh2 child 5-->
     <audio id="hh2">
         <source src="assets/audio/hh2.ogg" type="audio/ogg">
         <source src="assets/audio/hh2.mp3" type="audio/mpeg">
     </audio>
-    <!--cymbol-->
+    <!--cymbol child 6-->
     <audio id="cymbol">
         <source src="assets/audio/cymbol.ogg" type="audio/ogg">
         <source src="assets/audio/cymbol.mp3" type="audio/mpeg">
     </audio>
-    <!--vynil crackle-->
+    <!--vynil crackle child 7-->
     <audio id="vynil">
         <source src="assets/audio/vynil-crackle.ogg" type="audio/ogg">
         <source src="assets/audio/vynil-crackle.mp3" type="audio/mpeg">
     </audio>
-    <!--bleep1-->
+    <!--bleep1 child 8-->
     <audio id="bleep1">
         <source src="assets/audio/bleep1.ogg" type="audio/ogg">
         <source src="assets/audio/bleep1.mp3" type="audio/mpeg">
     </audio>
-    <!--bleep2-->
+    <!--bleep2 child 9-->
     <audio id="bleep2">
         <source src="assets/audio/bleep2.ogg" type="audio/ogg">
         <source src="assets/audio/bleep2.mp3" type="audio/mpeg">
     </audio>
-    <!--keys1-->
+    <!--keys1 child 10-->
     <audio id="keys1">
         <source src="assets/audio/keys1.ogg" type="audio/ogg">
         <source src="assets/audio/keys1.mp3" type="audio/mpeg">
     </audio>
-    <!--keys2-->
+    <!--keys2 child 11-->
     <audio id="keys2">
         <source src="assets/audio/keys2.ogg" type="audio/ogg">
         <source src="assets/audio/keys2.mp3" type="audio/mpeg">
     </audio>
-    <!--keys3-->
+    <!--keys3 child 12-->
     <audio id="keys3">
         <source src="assets/audio/keys3.ogg" type="audio/ogg">
         <source src="assets/audio/keys3.mp3" type="audio/mpeg">
     </audio>
-    <!--loop1-->
+    <!--loop1 child 13-->
     <audio id="loop1">
         <source src="assets/audio/loop1.ogg" type="audio/ogg">
         <source src="assets/audio/loop1.mp3" type="audio/mpeg">
     </audio>
-    <!--loop2-->
+    <!--loop2 child 14-->
     <audio id="loop2">
         <source src="assets/audio/loop2.ogg" type="audio/ogg">
         <source src="assets/audio/loop2.mp3" type="audio/mpeg">
     </audio>
-    <!--loop3-->
+    <!--loop3 child 15-->
     <audio id="loop3">
         <source src="assets/audio/loop3.ogg" type="audio/ogg">
         <source src="assets/audio/loop4.mp3" type="audio/mpeg">
@@ -103,28 +103,27 @@
             <div class="sound-board">
                 <!--row container 4-->
                 <div class="row">
-                    <button class="sound-btn">KEYS 1</button>
-                    <button class="sound-btn">KEYS 2</button>
-                    <button class="sound-btn">KEYS 3</button>
+                    <button id="btn-10" class="sound-btn">KEYS 1</button>
+                    <button id="btn-11" class="sound-btn">KEYS 2</button>
+                    <button id="btn-12" class="sound-btn">KEYS 3</button>
                 </div>
                 <!--row container 3-->
                 <div class="row">
-                    <button class="sound-btn" >BLEEP 1</button>
-                    <button class="sound-btn" >BLEEP 2</button>
-                    <button class="sound-btn" >BLEEP 3</butto>
+                    <button id="btn-7" class="sound-btn" >BLEEP 1</button>
+                    <button id="btn-8" class="sound-btn" >BLEEP 2</button>
+                    <button id="btn-9" class="sound-btn" >BLEEP 3</butto>
                 </div>
                 <!--row container 2-->
                 <div class="row">
-                    <button class="sound-btn" >HH 1</button>
-                    <button class="sound-btn" >HH1</button>
-                    <button class="sound-btn">CYM</butto>
+                    <button id="btn-4" class="sound-btn" >HH 1</button>
+                    <button id="btn-5" class="sound-btn" >HH1</button>
+                    <button id="btn-6" class="sound-btn">CYM</butto>
                 </div>
                 <!--row container 1-->
                 <div class="row">
-                    <button id="btn-1" class="sound-btn1" type="button">KIICK 1</button>
-                    <button class="sound-btn" type="button">SNARE 1</button>
-                    <button class="sound-btn" type="button">SNARE 2
-                    </button>
+                    <button id="btn-1" class="sound-btn" type="button">KIICK 1</button>
+                    <button id="btn-2" class="sound-btn" type="button">SNARE 1</button>
+                    <button id="btn-3" class="sound-btn" type="button">SNARE 2</button>
                 </div>
             </div>
             <!--sound-board end-->
@@ -133,15 +132,9 @@
             <div class="sound-board" id="sound-board2">
                 <!--row container loop-->
                 <div class="row">
-<<<<<<< HEAD
-                    <button id="btn-1" class="sound-btn1" type="button">LOOP 1</button> 
-                    <button class="sound-btn">LOOP 2</button>
-                    <button class="sound-btn" type="button">LOOP 3</button>
-=======
-                    <button id="btn-1" class="sound-btn1" onclick="playLoop1()" type="button">LOOP 1</button>                
-                    <button class="sound-btn" onclick="playLoop2()" type="button">LOOP 2</button>
-                    <button class="sound-btn" onclick="playLoop3()" type="button">LOOP 3</button>
->>>>>>> refs/remotes/origin/main
+                    <button id="lp-bt-1" class="sound-btn1" type="button">LOOP 1</button> 
+                    <button id="lp-bt-2"class="sound-btn">LOOP 2</button>
+                    <button id="lp-bt-3"class="sound-btn" type="button">LOOP 3</button>
                 </div>
             </div>
             <!--loop sound-board end-->
