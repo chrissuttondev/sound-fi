@@ -59,6 +59,40 @@ for (let i = 0; i < audioIds.length; i++) {
 
 }
 
+//method of playing audio could be more efiecent. Use JS to create and audio elemnent 
+//when a keyboard character, mouse or touch screen is interacted with by a user (the event).
+// set up event listener to capture the interaction
+//up the even occouring create and audio element to play desired audio file.
+//use appendChild to add audio element to the document.
+
+////// source code https://tinyurl.com/zdcrxr6a /////////
+
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', 'audio.ogg');
+//how to point to source?
+function PlayAudio() {
+
+    audioElement.load;
+    audioElement.play();
+
+}
+
+
+
+
+
+////Loop false as default on page load alt method
+//The above solution is ok. Need to access all of the audio tags attibutes globally
+// const audioTags = documnet.getElementsByTagName(audio);
+// function loopOff (){
+//     if (audio){
+//        audio.loop = false;
+//     }
+// }
+
+//https://www.developerdrive.com/manipulating-html5s-native-audio-with-javascript/
+
+
 //Iterate through array(s) and set up event listener(s) 
 // For loop https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/73e9c0413ead4a21b389e33c77706102/4fe6474cab114387ad0e72bf7ec1c201/14?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%40273b80fa87814494a107e8365ccc22fe    
 for (let i = 0; i < buttonIds.length; i++) {
@@ -72,7 +106,7 @@ for (let i = 0; i < buttonIds.length; i++) {
 /*funtion for loop pad play. Give user access to play / stop and loop. 
   need to access audio controls for audio element with id dr-bt-1 
   assign the loop control to the loop button and stop control to the
-  stop button
+  stop button. 
   https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop
   */
 
@@ -112,7 +146,23 @@ z=1 x=2 c=3
 a=4 s=5 d=6
 q=7 w=8 e=9
 r=10 t=11 y=12
+
 */
 
+/*///////
+source code 
+https://www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
 
 
+*/
+document.addEventListener('keydown', (event) => {
+    // triggers sound
+})
+
+//end of source used//
+
+//array to hold keyboard value and audio pairs
+
+let keysTriggers = {
+
+}
