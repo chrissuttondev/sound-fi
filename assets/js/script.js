@@ -93,9 +93,12 @@ function stopAudio(audioId) {
 
 // Event listener for loop button
 document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
-
+document.getElementById("dr-lp-2").addEventListener('click', () => loopDrums('dr2'));
+document.getElementById("dr-lp-3").addEventListener('click', () => loopDrums('dr3'));
 //Event Listener for stop button
 document.getElementById("dr-stop-1").addEventListener('click', () => stopAudio('dr1'));
+document.getElementById("dr-stop-2").addEventListener('click', () => stopAudio('dr2'));
+document.getElementById("dr-stop-3").addEventListener('click', () => stopAudio('dr3'));
 
 /*when buttons triggered (clicked) will respond to being clicked immiedatly 
 after and restart audio before it finishes playing. This will give more 
@@ -109,15 +112,6 @@ z=1 x=2 c=3
 a=4 s=5 d=6
 q=7 w=8 e=9
 r=10 t=11 y=12
-
-eg. when key w is pressed playPadOne() function called
-
-/* Solution to problem described in the comment above founh here.
-https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
-
-audio can played immiedatley from start even while playing back.
-eg https://www.myinstants.com/en/instant/ive-got-you-in-my-sight-52194/
-
 */
 
 
