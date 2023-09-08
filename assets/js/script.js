@@ -28,35 +28,35 @@ kits at random.
 ---------------------------------------------------------*/
 
 //Play audio via button function. Play audio on associated button when button clicked.
-function playPad(audioId, buttonId) {
+function playPad(buttonId, audioId) {
     //get button and audio ids
     const button = document.getElementById(buttonId);
     const audio = document.getElementById(audioId);
-  
-    //If statement. Conditon to check if buttons and audio have been found in the DOM
+
+    //If statement. Conditon to check if buttons and audio have been accessed in DOM
     if (button && audio) {
         button.addEventListener('click', () => {
             audio.play();
         });
     }
-
-    //Audio ID Array to access audio html elements by ID
-    const audioIds = ["kick", "snare", "snare2", "hh1", "hh2", "cymbol", "vynil",
-        "bleep1", "bleep2", "keys1", "keys2", "keys3"];
-
-    //Button ID Array to acces button html elements by ID
-    const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
-        "btn-7", "btn-8", "btn-9", "btn-10", "btn-11", "btn-12",];
-
-    //iterate through array(s) and set up event listener(s) 
-    // For loop https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/73e9c0413ead4a21b389e33c77706102/4fe6474cab114387ad0e72bf7ec1c201/14?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%40273b80fa87814494a107e8365ccc22fe    
-    for (let i = 0; i > button.length; i++) {
-        const buttonId = buttonIds[i];
-        const audioId = audioIds[i];
-        playPad(buttonId, audioId);
-    }
-
 }
+//Button ID Array to acces button html elements by ID
+const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
+    "btn-7", "btn-8", "btn-9", "btn-10", "btn-11", "btn-12",];
+
+//Audio ID Array to access audio html elements by ID
+const audioIds = ["kick", "snare", "snare2", "hh1", "hh2", "cymbol", "vynil",
+    "bleep1", "bleep2", "keys1", "keys2", "keys3"];
+
+//iterate through array(s) and set up event listener(s) 
+// For loop https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/73e9c0413ead4a21b389e33c77706102/4fe6474cab114387ad0e72bf7ec1c201/14?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%40273b80fa87814494a107e8365ccc22fe    
+for (let i = 0; i < buttonIds.length; i++) {
+    const buttonId = buttonIds[i];
+    const audioId = audioIds[i];
+    playPad(buttonId, audioId);
+}
+
+
 
 
 
