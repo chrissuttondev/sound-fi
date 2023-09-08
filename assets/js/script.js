@@ -42,13 +42,24 @@ function playPad(buttonId, audioId) {
 }
 //Button ID Array to acces button html elements by ID
 const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
-    "btn-7", "btn-8", "btn-9", "btn-10", "btn-11", "btn-12",];
+    "btn-7", "btn-8", "btn-9", "btn-10", "btn-11", "btn-12", "dr-bt-1", "dr-bt-2", "dr-bt-3"];
 
 //Audio ID Array to access audio html elements by ID
 const audioIds = ["kick", "snare", "snare2", "hh1", "hh2", "cymbol", "vynil",
-    "bleep1", "bleep2", "keys1", "keys2", "keys3"];
+    "bleep1", "bleep2", "keys1", "keys2", "keys3", "dr1", "dr2", "dr3"];
 
-//iterate through array(s) and set up event listener(s) 
+//Set audio elements controls loop attribute to default as off when page loads
+for (let i = 0; i < audioIds.length; i++) {
+    const audioId = audioIds[i];
+    const audio = document.getElementById(audioId);
+
+    if (audio) {
+        audio.loop = false;
+    }
+
+}
+
+//Iterate through array(s) and set up event listener(s) 
 // For loop https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/73e9c0413ead4a21b389e33c77706102/4fe6474cab114387ad0e72bf7ec1c201/14?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%40273b80fa87814494a107e8365ccc22fe    
 for (let i = 0; i < buttonIds.length; i++) {
     const buttonId = buttonIds[i];
@@ -58,7 +69,33 @@ for (let i = 0; i < buttonIds.length; i++) {
 
 //js functionallity to add
 
-//funtion for loop pad play. Give user access to play / stop and loop. 
+/*funtion for loop pad play. Give user access to play / stop and loop. 
+  need to access audio controls for audio element with id dr-bt-1 
+  assign the loop control to the loop button and stop control to the
+  stop button
+  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop
+  */
+
+function loopDrums(audioId) {
+    const drums = document.getElementById(audioId);
+    drums.loop = !drums.loop;
+}
+
+// Stop Audio function
+function stopAudio(audioId) {
+    const audioElement = document.getElementById(audioId);
+
+    if(audioElement) {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    }
+}
+
+// Event listener for loop button
+document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
+
+//Event Listener for stop button
+document.getElementById("dr-stop-1").addEventListener('click', () => stopAudio('dr1'));
 
 /*when buttons triggered (clicked) will respond to being clicked immiedatly 
 after and restart audio before it finishes playing. This will give more 

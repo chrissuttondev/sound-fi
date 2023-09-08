@@ -74,17 +74,17 @@
         <source src="assets/audio/keys3.mp3" type="audio/mpeg">
     </audio>
     <!--loop1 child 13-->
-    <audio id="loop1">
+    <audio id="dr1" class="drum-loop" controls loop>
         <source src="assets/audio/loop1.ogg" type="audio/ogg">
         <source src="assets/audio/loop1.mp3" type="audio/mpeg">
     </audio>
     <!--loop2 child 14-->
-    <audio id="loop2">
+    <audio id="dr2">
         <source src="assets/audio/loop2.ogg" type="audio/ogg">
         <source src="assets/audio/loop2.mp3" type="audio/mpeg">
     </audio>
     <!--loop3 child 15-->
-    <audio id="loop3">
+    <audio id="dr3">
         <source src="assets/audio/loop3.ogg" type="audio/ogg">
         <source src="assets/audio/loop4.mp3" type="audio/mpeg">
     </audio>
@@ -130,11 +130,24 @@
             <!--loop soundboard-container-->
             <h3>Play Loops and Jam along</h3>
             <div class="sound-board" id="sound-board2">
-                <!--row container loop-->
+                <!--Drums backing track container -->
                 <div class="row">
-                    <button id="lp-bt-1" class="lp1" type="button">LOOP 1</button> 
-                    <button id="lp-bt-2"class="lp2">LOOP 2</button>
-                    <button id="lp-bt-3"class="lp3" type="button">LOOP 3</button>
+                    <div id="dr1-group">
+                        <button id="dr-bt-1" class="dr-lp" type="button">Drums1</button>
+                        <button id="dr-lp-1" class ="dr-lp" type="button">loop</button> <!--loop on of for dr1 -->
+                        <button id="dr-stop-1" class="dr-stop" type="button">stop</button> <!--stop for dr1-->
+                    </div> 
+                    <div id="dr2-group">   
+                        <button id="dr-bt-2"class="dr">Drums2</button>
+                        <button id="dr-lp-2" class="dr" type="button">loop</button>
+                        <button id="dr-stop-2" class="dr-stop" type="button">stop</button>
+                    </div>  
+                    <div id="dr3-group">
+                        <button id="dr-bt-3" class="dr">Drums2</button>
+                        <button id="dr-lp-3" class="dr" type="button">loop</button>
+                        <button id="dr-stop-3" class="dr-stop" type="button">stop</button>
+                    </div>
+                        
                 </div>
             </div>
             <!--loop sound-board end-->
