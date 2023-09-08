@@ -56,26 +56,16 @@ for (let i = 0; i < buttonIds.length; i++) {
     playPad(buttonId, audioId);
 }
 
+//js functionallity to add
 
+//funtion for loop pad play. Give user access to play / stop and loop. 
 
+/*when buttons triggered (clicked) will respond to being clicked immiedatly 
+after and restart audio before it finishes playing. This will give more 
+resonsivity and musicallity The will give the application functionality closer to
+real word audio sample players and enhance user experience*/
 
-
-/*if (condition) {
-    // code if true
-} else {
-    // code if false
-}*/
-
-
-
-//prevent loops from playing at the same time
-
-
-//funtion for loop pads. Event listeners. play on loop when clicked. play end of loop on next click.
-
-
-/* js functionallity to add
-
+/* key mapping
 event listener. When user clicks a key on the keyboard a sound pad plays.
 Keys mapped
 z=1 x=2 c=3
