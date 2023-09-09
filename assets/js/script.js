@@ -30,12 +30,36 @@ r=10 t=11 y=12
 */
  //Keydown function map keys to buttons by id
 const keyMap = {
-    'z': 'btn-1'
-}
+    'd': 'btn-1', 
+    'f': 'btn-2',
+    'g': 'btn-3',
+    'h': 'btn-4',
+    'j': 'btn-5',
+    'k': 'btn-6',
+    't': 'btn-7',
+    'y': 'btn-8',
+    'u': 'btn-9',
+    'c': 'dr-bt-1',
+    'v': 'dr-bt-2',
+    'u': 'dr-bt-3',
+};
+ document.addEventListener('keydown', function(event){
+    const key = event.key.toLowerCase();
+    const buttonId = keyMap[key];
+    
+    if (buttonId) {
+        const button = document.getElementById(buttonId)
+        if (button) {
+            button.click();
+        }
+    }
+    });
+ 
+
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
-//variable
-document.addEventListener('keydown');
+
+
 
  //source code;
 //www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
