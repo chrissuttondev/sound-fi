@@ -1,6 +1,6 @@
 console.log("Welcome to Sound-Fi");
 //Play audio via button function. Play audio on associated button when button clicked.
-try {
+
     function playPad(buttonId, audioId) {
         //get button and audio ids
         const button = document.getElementById(buttonId);
@@ -13,9 +13,9 @@ try {
                 audio.play();
             });
         }
-    } catch {
+
     console.log('error');
-}
+
 //Button ID Array to acces button html elements by ID
 const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
     "btn-7", "btn-8", "btn-9", "btn-10", "btn-11", "btn-12", "dr-bt-1", "dr-bt-2", "dr-bt-3"];
@@ -33,15 +33,15 @@ const keyMap = {
     'h': 'btn-4',
     'j': 'btn-5',
     'k': 'btn-6',
-    't': 'btn-7',
-    'y': 'btn-8',
-    'u': 'btn-9',
+    'e': 'btn-7',
+    'r': 'btn-8',
+    't': 'btn-9',
     'c': 'dr-bt-1',
     'v': 'dr-bt-2',
-    'u': 'dr-bt-3',
+    'b': 'dr-bt-3',
 };
 //Keydown event listener and function
-try {
+
     document.addEventListener('keydown', function (event) {
         const key = event.key.toLowerCase();
         const buttonId = keyMap[key];
@@ -50,32 +50,11 @@ try {
             const button = document.getElementById(buttonId);
             if (button) {
                 button.click();
-                button.style.backgroundColor='orange';
+               
             }
         }
     });
-} catch {
-    console.log('error');
-}
-//Keydown event listener and function
-try {
-    document.addEventListener('keydown', function (event) {
-        const key = event.key.toLowerCase();
-        const buttonId = keyMap[key];
-
-        if (buttonId) {
-            const button = document.getElementById(buttonId);
-            if (button) {
-                button.click();
-                button.style.backgroundColor='orange';
-            }
-        }
-    });
-} catch {
- 
-
 //Set audio elements controls loop attribute to default as off when page loads
-try {
     for (let i = 0; i < audioIds.length; i++) {
         const audioId = audioIds[i];
         const audio = document.getElementById(audioId);
@@ -85,21 +64,16 @@ try {
         }
 
     }
-} catch {
-    console.log('error');
-}
 
 // For loop itereates through audioId and buttonId array
-try {
+
     for (let i = 0; i < buttonIds.length; i++) {
         const buttonId = buttonIds[i];
         const audioId = audioIds[i];
         playPad(buttonId, audioId);
     }
-} catch {
-    console.log('error');
-}
-try {
+
+
     function loopDrums(audioId) {
         const drums = document.getElementById(audioId);
         drums.loop = !drums.loop;
@@ -114,27 +88,20 @@ try {
             audioElement.currentTime = 0;
         }
     }
-} catch {
-    console.log('error');
-}
+
 
 // Event listener for loop button
-try {
     document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
     document.getElementById("dr-lp-2").addEventListener('click', () => loopDrums('dr2'));
     document.getElementById("dr-lp-3").addEventListener('click', () => loopDrums('dr3'));
-} catch {
-    console.log(error);
-}
+
 //Event Listener for stop button
-try {
     document.getElementById("dr-stop-1").addEventListener('click', () => stopAudio('dr1'));
     document.getElementById("dr-stop-2").addEventListener('click', () => stopAudio('dr2'));
     document.getElementById("dr-stop-3").addEventListener('click', () => stopAudio('dr3'));
-} catch {
-    console.log('error');
-}
-}
+
+  
+
 /*when buttons triggered (clicked) will respond to being clicked immiedatly
 after and restart audio before it finishes playing. This will give more
 resonsivity and musicallity The will give the application functionality closer to
