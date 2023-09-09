@@ -54,6 +54,7 @@ const keyMap = {
             }
         }
     });
+
 //Set audio elements controls loop attribute to default as off when page loads
     for (let i = 0; i < audioIds.length; i++) {
         const audioId = audioIds[i];
@@ -89,7 +90,6 @@ const keyMap = {
         }
     }
 
-
 // Event listener for loop button
     document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
     document.getElementById("dr-lp-2").addEventListener('click', () => loopDrums('dr2'));
@@ -103,10 +103,9 @@ const keyMap = {
   
 
 /*when buttons triggered (clicked) will respond to being clicked immiedatly
-after and restart audio before it finishes playing. This will give more
+after by restarting playpack before it finishes playing. This will give more
 resonsivity and musicallity The will give the application functionality closer to
 real word audio sample players and enhance user experience*/
-
 
 /*
 source code
@@ -121,10 +120,6 @@ https://www.section.io/engineering-education/keyboard-events-in-javascript/#java
 //use appendChild to add audio element to the document.
 ////// source code https://tinyurl.com/zdcrxr6a /////////
 
-
-////Loop false as default on page load alt method
-//The above solution is ok. Need to access all of the audio tags attibutes globally
-//https://www.developerdrive.com/manipulating-html5s-native-audio-with-javascript/
 
 /*Sound coustructor ta access audio files instead? Less static html 
 access more audio files and give more variation for user. Could have different 
@@ -146,7 +141,10 @@ kits at random.
   https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop
   */
 
+//
+
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
-//source code;
 //www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
+//https://marcusmcb.github.io/JS-Drum-Machine/
+//https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide
