@@ -2,7 +2,7 @@
 
 function handleSubmit(event) {
     event.preventDefault();
-    let p1 = form.elements['password'].value;
+    let p1 = form.elements.password.value;
     let p2 = form.elements['confirm-password'].value;
 
     if (p1 !== p2) {
