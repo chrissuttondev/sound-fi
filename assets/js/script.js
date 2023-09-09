@@ -67,13 +67,11 @@ const keyMap = {
     }
 
 // For loop itereates through audioId and buttonId array
-
     for (let i = 0; i < buttonIds.length; i++) {
         const buttonId = buttonIds[i];
         const audioId = audioIds[i];
         playPad(buttonId, audioId);
     }
-
 
     function loopDrums(audioId) {
         const drums = document.getElementById(audioId);
