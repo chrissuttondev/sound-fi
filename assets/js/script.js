@@ -1,16 +1,20 @@
 console.log("Welcome to Sound-Fi");
 //Play audio via button function. Play audio on associated button when button clicked.
-function playPad(buttonId, audioId) {
-    //get button and audio ids
-    const button = document.getElementById(buttonId);
-    const audio = document.getElementById(audioId);
+try {
+    function playPad(buttonId, audioId) {
+        //get button and audio ids
+        const button = document.getElementById(buttonId);
+        const audio = document.getElementById(audioId);
 
-    //If statement. Conditon to check if buttons and audio have been accessed in DOM
-    if (button && audio) {
-        button.addEventListener('click', () => {
-            audio.play();
-        });
-    }
+        //If statement. Conditon to check if buttons and audio have been accessed in DOM
+        
+        if (button && audio) // also works with && {
+            button.addEventListener('click', () => {
+                audio.play();
+            });
+        }
+    } catch {
+    console.log('error');
 }
 //Button ID Array to acces button html elements by ID
 const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
@@ -20,17 +24,10 @@ const buttonIds = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6",
 const audioIds = ["kick", "snare", "snare2", "hh1", "hh2", "cymbol", "vynil",
     "bleep1", "bleep2", "keys1", "keys2", "keys3", "dr1", "dr2", "dr3"];
 
-/* key mapping
-event listener. When user clicks a key on the keyboard a sound pad plays.
-Keys mapped
-z=1 x=2 c=3
-a=4 s=5 d=6
-q=7 w=8 e=9
-r=10 t=11 y=12
-*/
- //Keydown function map keys to buttons by id
+
+//Keydown map pairings. Object to be accessed via function
 const keyMap = {
-    'd': 'btn-1', 
+    'd': 'btn-1',
     'f': 'btn-2',
     'g': 'btn-3',
     'h': 'btn-4',
@@ -43,88 +40,109 @@ const keyMap = {
     'v': 'dr-bt-2',
     'u': 'dr-bt-3',
 };
- document.addEventListener('keydown', function(event){
-    const key = event.key.toLowerCase();
-    const buttonId = keyMap[key];
-    
-    if (buttonId) {
-        const button = document.getElementById(buttonId)
-        if (button) {
-            button.click();
+//Keydown event listener and function
+try {
+    document.addEventListener('keydown', function (event) {
+        const key = event.key.toLowerCase();
+        const buttonId = keyMap[key];
+
+        if (buttonId) {
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.click();
+                button.style.backgroundColor='orange';
+            }
         }
-    }
     });
+} catch {
+    console.log('error');
+}
+//Keydown event listener and function
+try {
+    document.addEventListener('keydown', function (event) {
+        const key = event.key.toLowerCase();
+        const buttonId = keyMap[key];
+
+        if (buttonId) {
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.click();
+                button.style.backgroundColor='orange';
+            }
+        }
+    });
+} catch {
  
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-
-
-
-
- //source code;
-//www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
 //Set audio elements controls loop attribute to default as off when page loads
-for (let i = 0; i < audioIds.length; i++) {
-    const audioId = audioIds[i];
-    const audio = document.getElementById(audioId);
+try {
+    for (let i = 0; i < audioIds.length; i++) {
+        const audioId = audioIds[i];
+        const audio = document.getElementById(audioId);
 
-    if (audio) {
-        audio.loop = false;
+        if (audio) {
+            audio.loop = false;
+        }
+
     }
-
+} catch {
+    console.log('error');
 }
 
-//Iterate through array(s) and set up event listener(s) 
-// For loop https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/73e9c0413ead4a21b389e33c77706102/4fe6474cab114387ad0e72bf7ec1c201/14?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%40273b80fa87814494a107e8365ccc22fe    
-for (let i = 0; i < buttonIds.length; i++) {
-    const buttonId = buttonIds[i];
-    const audioId = audioIds[i];
-    playPad(buttonId, audioId);
+// For loop itereates through audioId and buttonId array
+try {
+    for (let i = 0; i < buttonIds.length; i++) {
+        const buttonId = buttonIds[i];
+        const audioId = audioIds[i];
+        playPad(buttonId, audioId);
+    }
+} catch {
+    console.log('error');
 }
-
-//js functionallity to add
-
-/*funtion for loop pad play. Give user access to play / stop and loop. 
-  need to access audio controls for audio element with id dr-bt-1 
-  assign the loop control to the loop button and stop control to the
-  stop button. 
-  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop
-  */
-
-function loopDrums(audioId) {
-    const drums = document.getElementById(audioId);
-    drums.loop = !drums.loop;
-}
+try {
+    function loopDrums(audioId) {
+        const drums = document.getElementById(audioId);
+        drums.loop = !drums.loop;
+    }
 
 // Stop Audio function
-function stopAudio(audioId) {
-    const audioElement = document.getElementById(audioId);
+    function stopAudio(audioId) {
+        const audioElement = document.getElementById(audioId);
 
-    if(audioElement) {
-        audioElement.pause();
-        audioElement.currentTime = 0;
+        if (audioElement) {
+            audioElement.pause();
+            audioElement.currentTime = 0;
+        }
     }
+} catch {
+    console.log('error');
 }
-// Event listener for loop button
-document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
-document.getElementById("dr-lp-2").addEventListener('click', () => loopDrums('dr2'));
-document.getElementById("dr-lp-3").addEventListener('click', () => loopDrums('dr3'));
-//Event Listener for stop button
-document.getElementById("dr-stop-1").addEventListener('click', () => stopAudio('dr1'));
-document.getElementById("dr-stop-2").addEventListener('click', () => stopAudio('dr2'));
-document.getElementById("dr-stop-3").addEventListener('click', () => stopAudio('dr3'));
 
-/*when buttons triggered (clicked) will respond to being clicked immiedatly 
-after and restart audio before it finishes playing. This will give more 
+// Event listener for loop button
+try {
+    document.getElementById("dr-lp-1").addEventListener('click', () => loopDrums('dr1'));
+    document.getElementById("dr-lp-2").addEventListener('click', () => loopDrums('dr2'));
+    document.getElementById("dr-lp-3").addEventListener('click', () => loopDrums('dr3'));
+} catch {
+    console.log(error);
+}
+//Event Listener for stop button
+try {
+    document.getElementById("dr-stop-1").addEventListener('click', () => stopAudio('dr1'));
+    document.getElementById("dr-stop-2").addEventListener('click', () => stopAudio('dr2'));
+    document.getElementById("dr-stop-3").addEventListener('click', () => stopAudio('dr3'));
+} catch {
+    console.log('error');
+}
+}
+/*when buttons triggered (clicked) will respond to being clicked immiedatly
+after and restart audio before it finishes playing. This will give more
 resonsivity and musicallity The will give the application functionality closer to
 real word audio sample players and enhance user experience*/
 
 
-
-
-
 /*
-source code 
+source code
 https://www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
 
 
@@ -154,3 +172,14 @@ https://medium.com/@iminked/build-a-drum-machine-with-javascript-html-and-css-33
 Could expand on this idea and allow users to mix and match sounds and / or use math floor to select 
 kits at random.
 ---------------------------------------------------------*/
+/*funtion for loop pad play. Give user access to play / stop and loop. 
+  need to access audio controls for audio element with id dr-bt-1 
+  assign the loop control to the loop button and stop control to the
+  stop button. 
+  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_loop
+  */
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+
+//source code;
+//www.section.io/engineering-education/keyboard-events-in-javascript/#javascript-keyboard-events
